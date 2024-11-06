@@ -162,7 +162,7 @@ const signUp = async (msg: any) => {
       if (!process.env.WEB_URL) throw new Error("no WEB_URL provided ");
 
       const embed = new Discord.EmbedBuilder();
-      embed.setURL(multipassJs.getDappURL(registrarMessage, signature, process.env.WEB_URL + `/dapps/multipass/signup`, getArtifact("anvil", "Multipass").address, DOMAIN_NAME));
+      embed.setURL(multipassJs.getDappURL(registrarMessage, signature, process.env.WEB_URL, getArtifact("anvil", "Multipass").address, DOMAIN_NAME));
       embed.setDescription("This will take you to multipass registry website").setTitle("Click to register");
 
       channel.send({ embeds: [embed] });
