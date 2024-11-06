@@ -1,0 +1,5 @@
+discord.env
+.bot/
+DS_Store
+.secrets
+node_modules
